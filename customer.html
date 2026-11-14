@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard-admin.css">
+    <title>Customers - Dasbor Admin</title>
+</head>
+<body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h1>New Balance store</h1>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analystics.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Analistik</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="products.html">
+                        <i class="fa-solid fa-box"></i>
+                        <span>Produk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Pesanan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer.html" class="active" aria-current="page">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="laporan.html">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Laporan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+            <button class="sidebar-toggle" onclick="toggleSidebar()">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+             <h1>Customers</h1>
+        </header>
+
+        <section class="content-area">
+            <div class="table-box">
+                <div class="table-header">
+                    <h2>Data Customer</h2>
+                    <input type="text" class="table-search" placeholder="Cari customer...">
+                </div>
+
+                <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>No HP</th>
+                            <th>Total Pesanan</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Rizky Pratama</td>
+                            <td>rizky.pratama@email.com</td>
+                            <td>0812-3456-7890</td>
+                            <td>3</td>
+                            <td>
+                                <button class="btn-edit">Detail</button>
+                                <button class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Dinda Ayu</td>
+                            <td>dinda.ayu@email.com</td>
+                            <td>0813-2345-6789</td>
+                            <td>1</td>
+                            <td>
+                                <button class="btn-edit">Detail</button>
+                                <button class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Agus Setiawan</td>
+                            <td>agus.setiawan@email.com</td>
+                            <td>0857-1122-3344</td>
+                            <td>5</td>
+                            <td>
+                                <button class="btn-edit">Detail</button>
+                                <button class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Sari Wulandari</td>
+                            <td>sari.wulandari@email.com</td>
+                            <td>0821-9988-7766</td>
+                            <td>2</td>
+                            <td>
+                                <button class="btn-edit">Detail</button>
+                                <button class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Budi Hartono</td>
+                            <td>budi.hartono@email.com</td>
+                            <td>0838-5566-7788</td>
+                            <td>4</td>
+                            <td>
+                                <button class="btn-edit">Detail</button>
+                                <button class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Maya Puspita</td>
+                            <td>maya.puspita@email.com</td>
+                            <td>0895-4433-2211</td>
+                            <td>1</td>
+                            <td>
+                                <button class="btn-edit">Detail</button>
+                                <button class="btn-hapus">Hapus</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </section>
+      </main>
+      <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    </div>
+        <script src="admin.js"></script>
+</body>
+</html>

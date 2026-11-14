@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashboard-admin.css">
+    <title>Laporan - Dasbor Admin</title>
+</head>
+<body>
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h1>New Balance store</h1>
+        </div>
+        <nav class="sidebar-menu">
+            <ul>
+                <li>
+                    <a href="dashboard.html">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="analystics.html">
+                        <i class="fa-solid fa-chart-pie"></i>
+                        <span>Analistik</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="products.html">
+                        <i class="fa-solid fa-box"></i>
+                        <span>Produk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="orders.html">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Pesanan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="customer.html">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Customers</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="laporan.html" class="active" aria-current="page">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <span>Laporan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+            <button class="sidebar-toggle" onclick="toggleSidebar()">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+             <h1>Laporan</h1>
+        </header>
+
+        <section class="content-area">
+            <div class="table-box">
+                <div class="table-header">
+                    <h2>Laporan Penjualan Bulanan</h2>
+                    <input type="text" class="table-search" placeholder="Cari bulan...">
+                </div>
+
+                <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Bulan</th>
+                            <th>Total Pesanan</th>
+                            <th>Total Pendapatan</th>
+                            <th>Produk Terlaris</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Januari 2026</td>
+                            <td>85</td>
+                            <td>Rp 128.500.000</td>
+                            <td>New Balance 574</td>
+                            <td>
+                                <button class="btn-edit">Lihat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Februari 2026</td>
+                            <td>92</td>
+                            <td>Rp 141.200.000</td>
+                            <td>New Balance 327</td>
+                            <td>
+                                <button class="btn-edit">Lihat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Maret 2026</td>
+                            <td>78</td>
+                            <td>Rp 119.800.000</td>
+                            <td>New Balance 990</td>
+                            <td>
+                                <button class="btn-edit">Lihat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>April 2026</td>
+                            <td>101</td>
+                            <td>Rp 156.400.000</td>
+                            <td>New Balance 574</td>
+                            <td>
+                                <button class="btn-edit">Lihat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Mei 2026</td>
+                            <td>96</td>
+                            <td>Rp 148.900.000</td>
+                            <td>New Balance 550</td>
+                            <td>
+                                <button class="btn-edit">Lihat</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Juni 2026</td>
+                            <td>110</td>
+                            <td>Rp 167.300.000</td>
+                            <td>New Balance 327</td>
+                            <td>
+                                <button class="btn-edit">Lihat</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </div>
+            </div>
+        </section>
+      </main>
+      <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    </div>
+        <script src="admin.js"></script>
+</body>
+</html>

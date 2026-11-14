@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="dashboard-admin.css" />
+    <title>Analistik - Dasbor Admin</title>
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h1>New Balance store</h1>
+            </div>
+
+            <nav class="sidebar-menu">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="analystics.html" class="active" aria-current="page">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Analistik</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="products.html">
+                            <i class="fa-solid fa-box"></i>
+                            <span>Produk</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="orders.html">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span>Pesanan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customer.html">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="laporan.html">
+                            <i class="fa-solid fa-file-lines"></i>
+                            <span>Laporan</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="login.html">
+                            <i class="fa-solid fa-right-from-bracket"></i>
+                            <span>Login</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <button class="sidebar-toggle" onclick="toggleSidebar()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <h1>Analistik</h1>
+            </header>
+
+            <section class="content-area">
+                <div class="stats-grid">
+                    <div class="stat-card stat-card-1">
+                        <i class="fa-solid fa-chart-line"></i>
+                        <div>
+                            <h3>Rp 862jt</h3>
+                            <p>Pendapatan Tahun Ini</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-card-2">
+                        <i class="fa-solid fa-receipt"></i>
+                        <div>
+                            <h3>Rp 1,4jt</h3>
+                            <p>Rata-rata per Pesanan</p>
+                        </div>
+                    </div>
+
+                    <div class="stat-card stat-card-3">
+                        <i class="fa-solid fa-star"></i>
+                        <div>
+                            <h3>NB 574</h3>
+                            <p>Produk Terlaris</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chart-box">
+                    <h3>Tren Penjualan Bulanan</h3>
+                    <p class="subtitle">Periode Jan - Jun 2026</p>
+
+                    <svg viewBox="0 0 640 280" width="100%">
+                        <defs>
+                            <linearGradient id="areaGradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0%" stop-color="#e0622b" stop-opacity="0.25" />
+                                <stop offset="100%" stop-color="#e0622b" stop-opacity="0" />
+                            </linearGradient>
+                        </defs>
+
+                        <line class="grid-line" x1="40" y1="30" x2="620" y2="30" />
+                        <line class="grid-line" x1="40" y1="80" x2="620" y2="80" />
+                        <line class="grid-line" x1="40" y1="130" x2="620" y2="130" />
+                        <line class="grid-line" x1="40" y1="180" x2="620" y2="180" />
+                        <line class="grid-line" x1="40" y1="230" x2="620" y2="230" />
+
+                        <path class="trend-area" d="M60,190 L160,150 L260,165 L360,110 L460,90 L560,60 L560,230 L60,230 Z" />
+
+                        <path class="trend-line" d="M60,190 L160,150 L260,165 L360,110 L460,90 L560,60" />
+
+                        <circle class="data-point" cx="60" cy="190" r="5" />
+                        <circle class="data-point" cx="160" cy="150" r="5" />
+                        <circle class="data-point" cx="260" cy="165" r="5" />
+                        <circle class="data-point" cx="360" cy="110" r="5" />
+                        <circle class="data-point" cx="460" cy="90" r="5" />
+                        <circle class="data-point" cx="560" cy="60" r="5" />
+
+                        <text class="data-value" x="52" y="180">32</text>
+                        <text class="data-value" x="152" y="140">45</text>
+                        <text class="data-value" x="248" y="155">38</text>
+                        <text class="data-value" x="352" y="100">58</text>
+                        <text class="data-value" x="452" y="80">67</text>
+                        <text class="data-value" x="548" y="60">82</text>
+
+                        <text class="axis-label" x="52" y="250">Jan</text>
+                        <text class="axis-label" x="152" y="250">Feb</text>
+                        <text class="axis-label" x="248" y="250">Mar</text>
+                        <text class="axis-label" x="352" y="250">Apr</text>
+                        <text class="axis-label" x="452" y="250">Mei</text>
+                        <text class="axis-label" x="548" y="250">Jun</text>
+                    </svg>
+
+                    <div class="chart-legend">
+                        <span class="legend-dot"></span>
+                        <span>Jumlah Pesanan per Bulan</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="sidebar-overlay" id="sidebar-overlay" onclick="toggleSidebar()"></div>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>

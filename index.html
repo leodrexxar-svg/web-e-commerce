@@ -1,0 +1,560 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="nanstore.css" />
+    <title>New Balance store</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="navbar-container">
+          <a class="logo" href="index.html">
+            <img src="./New-Balance-Logo-2008-present.png" alt="" onerror="this.remove()" />
+            <span>New Balance</span>
+          </a>
+
+          <div class="navbar-menu" id="navbar-menu">
+            <ul class="nav-content">
+              <li><a href="#home">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#top-products">Top Products</a></li>
+              <li><a href="#all-products">All-Products</a></li>
+              <li><a href="#category">Category</a></li>
+
+              <!-- ===== LOGIN CUSTOMER ===== -->
+              <li>
+                <a href="login-customer.html">
+                  <i class="fa-solid fa-right-from-bracket"></i>
+                  <span>Login</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="search-form">
+            <input
+              type="text"
+              placeholder="Search products..."
+              class="search-input"
+            />
+            <button type="submit" class="search-button">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+
+          <button class="search-toggle" type="button" aria-label="Cari produk"
+                  aria-expanded="false" onclick="toggleSearch()">
+            <i class="fas fa-search"></i>
+          </button>
+
+          <div class="cart-wrap">
+            <a href="#" class="cart-icon" aria-label="Keranjang" onclick="event.preventDefault(); openCart()">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count">0</span>
+            </a>
+          </div>
+
+          <button class="hamburger" type="button" aria-label="Buka menu"
+                  aria-expanded="false" aria-controls="navbar-menu" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ========== SECTION HERO ============ -->
+
+    <main>
+      <section id="home" class="hero-section">
+        <div class="hero-content">
+          <h1>
+            Selamat Datang di
+            <br />
+            New Balance Store
+          </h1>
+
+          <p>
+            Dapatkan koleksi sepatu new balance terbaru kami dengan harga
+            terbaik dan kualitas terjamin. Temukan gaya dan kenyamanan yang
+            sesuai dengan kebutuhan Anda.
+          </p>
+
+          <a href="#all-products" class="shop-btn">Belanja sekarang </a>
+        </div>
+      </section>
+
+      <section id="top-products" class="catalog-products">
+        <div class="products-container">
+          <h2 class="section-title">Produk Terlaris minggu ini</h2>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new-balance-327.png" alt="New Balance 327" />
+              </div>
+
+              <div class="product-info">
+                <h3>New balance 327</h3>
+                <p>1.500.000</p>
+                <button onclick="addToCart('New Balance 327', '1.500.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-1300.png" alt="New Balance 1300" />
+              </div>
+
+              <div class="product-info">
+                <h3>New balance 1300</h3>
+                <p>2.500.000</p>
+                <button onclick="addToCart('New Balance 1300', '2.500.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new-balance-2002r.png" alt="New Balance 2002R" />
+              </div>
+
+              <div class="product-info">
+                <h3>New balance 2002R</h3>
+                <p>2.500.000</p>
+                <button onclick="addToCart('New Balance 2002R', '2.500.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-5740.png" alt="New Balance 57/40" />
+              </div>
+
+              <div class="product-info">
+                <h3>New balance 57/40</h3>
+                <p>1.800.000</p>
+                <button onclick="addToCart('New Balance 57/40', '1.800.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="all-products" class="catalog-products">
+        <div class="products-container">
+          <h2 class="section-title">Semua Produk</h2>
+
+          <div class="product-grid">
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new-balance-990 v5.png" alt="New Balance 990" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 990</h3>
+                <p>3.000.000</p>
+                <button onclick="addToCart('New Balance 990', '3.000.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new-balance-327.png" alt="New Balance 327" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 327</h3>
+                <p>1.500.000</p>
+                <button onclick="addToCart('New Balance 327', '1.500.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new-balance-2002r.png" alt="New Balance 2002R" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 2002R</h3>
+                <p>2.200.000</p>
+                <button onclick="addToCart('New Balance 2002R', '2.200.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-530.png" alt="New Balance 530" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 530</h3>
+                <p>1.400.000</p>
+                <button onclick="addToCart('New Balance 530', '1.400.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-574.png" alt="New Balance 574" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 574</h3>
+                <p>1.300.000</p>
+                <button onclick="addToCart('New Balance 574', '1.300.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-550-white.png" alt="New Balance 550" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 550</h3>
+                <p>1.700.000</p>
+                <button onclick="addToCart('New Balance 550', '1.700.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-9060.png" alt="New Balance 9060" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 9060</h3>
+                <p>2.500.000</p>
+                <button onclick="addToCart('New Balance 9060', '2.500.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new balance-1906r.png" alt="New Balance 1906R" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 1906R</h3>
+                <p>2.300.000</p>
+                <button onclick="addToCart('New Balance 1906R', '2.300.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+
+            <article class="product-card">
+              <div class="product-image">
+                <img src="./new-balance-480.png" alt="New Balance 480" />
+              </div>
+
+              <div class="product-info-2">
+                <h3>New Balance 480</h3>
+                <p>1.200.000</p>
+                <button onclick="addToCart('New Balance 480', '1.200.000')">
+                  Tambah Ke Keranjang
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="category" class="category-section">
+        <div class="products-container">
+          <h2 class="section-title">Belanja Berdasarkan Kategori</h2>
+
+          <div class="category-grid">
+            <div class="category-card" onclick="openModal('300')">
+              <img src="new-balance-327.png" alt="300 Series" />
+              <h3>300 Series</h3>
+            </div>
+
+            <div class="category-card" onclick="openModal('500')">
+              <img src="new balance-574.png" alt="500 Series" />
+              <h3>500 Series</h3>
+            </div>
+
+            <div class="category-card" onclick="openModal('1000')">
+              <img src="new-balance-990 v5.png" alt="1000 Series" />
+              <h3>1000 Series</h3>
+            </div>
+
+            <div class="category-card" onclick="openModal('2000')">
+              <img src="new-balance-2002r.png" alt="2000 Series" />
+              <h3>2000 Series</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== MODAL KATEGORI ===== -->
+      <div class="modal-overlay" id="modal-300">
+        <div class="modal-box">
+          <span class="modal-close" onclick="closeModal('300')">&times;</span>
+          <h2>300 Series</h2>
+          <div class="modal-products">
+            <div class="modal-product-item">
+              <img src="new-balance-327.png" alt="New Balance 327" />
+              <p>New Balance 327</p>
+              <p>Rp 1.500.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modal-500">
+        <div class="modal-box">
+          <span class="modal-close" onclick="closeModal('500')">&times;</span>
+          <h2>500 Series</h2>
+          <div class="modal-products">
+            <div class="modal-product-item">
+              <img src="new balance-574.png" alt="New Balance 574" />
+              <p>New Balance 574</p>
+              <p>Rp 1.300.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new balance-550-white.png" alt="New Balance 550" />
+              <p>New Balance 550</p>
+              <p>Rp 1.700.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new balance-530.png" alt="New Balance 530" />
+              <p>New Balance 530</p>
+              <p>Rp 1.400.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new-balance-480.png" alt="New Balance 480" />
+              <p>New Balance 480</p>
+              <p>Rp 1.200.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modal-1000">
+        <div class="modal-box">
+          <span class="modal-close" onclick="closeModal('1000')">&times;</span>
+          <h2>1000 Series</h2>
+          <div class="modal-products">
+            <div class="modal-product-item">
+              <img src="new balance-1300.png" alt="New Balance 1300" />
+              <p>New Balance 1300</p>
+              <p>Rp 2.500.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new-balance-990 v5.png" alt="New Balance 990" />
+              <p>New Balance 990</p>
+              <p>Rp 3.000.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-overlay" id="modal-2000">
+        <div class="modal-box">
+          <span class="modal-close" onclick="closeModal('2000')">&times;</span>
+          <h2>2000 Series</h2>
+          <div class="modal-products">
+            <div class="modal-product-item">
+              <img src="new-balance-2002r.png" alt="New Balance 2002R" />
+              <p>New Balance 2002R</p>
+              <p>Rp 2.200.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new balance-5740.png" alt="New Balance 57/40" />
+              <p>New Balance 57/40</p>
+              <p>Rp 1.800.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new balance-9060.png" alt="New Balance 9060" />
+              <p>New Balance 9060</p>
+              <p>Rp 2.500.000</p>
+            </div>
+            <div class="modal-product-item">
+              <img src="new balance-1906r.png" alt="New Balance 1906R" />
+              <p>New Balance 1906R</p>
+              <p>Rp 2.300.000</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="cart-drawer-overlay"
+        id="cart-overlay"
+        onclick="closeCart()"
+      ></div>
+
+      <div class="cart-drawer" id="cart-drawer">
+        <div class="cart-drawer-header">
+          <h2>Keranjang Belanja</h2>
+          <span class="modal-close" onclick="closeCart()">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-drawer-body"></div>
+        <div class="cart-drawer-footer">
+          <p>Total: Rp <span id="cart-total">0</span></p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <h3>New Balance Store</h3>
+          <p>Koleksi sepatu new balance pilihan untuk gaya dan kenyamanan</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Navigasi</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#top-products">Top Products</a></li>
+            <li><a href="#all-products">All-Products</a></li>
+            <li><a href="#category">Category</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact">
+          <h4>Kontak</h4>
+          <p><i class="fa-solid fa-envelope"></i><span>info@newbalancestore.com</span></p>
+          <p><i class="fa-solid fa-phone"></i><span>+62 812 3456 7890</span></p>
+        </div>
+
+        <div class="footer-social">
+          <h4>Ikuti Kami</h4>
+          <div class="social-icons">
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 New Balance Store. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="nav.js"></script>
+    <script>
+      function openModal(id) {
+        document.getElementById("modal-" + id).style.display = "flex";
+      }
+
+      function closeModal(id) {
+        document.getElementById("modal-" + id).style.display = "none";
+      }
+
+      let cart = [];
+
+      function addToCart(nama, harga) {
+        const hargaAngka = parseInt(harga.replace(/\./g, ""));
+        const existingItem = cart.find((item) => item.nama === nama);
+
+        if (existingItem) {
+          existingItem.qty++;
+        } else {
+          cart.push({ nama: nama, harga: hargaAngka, qty: 1 });
+        }
+
+        updateCartCount();
+      }
+
+      function updateCartCount() {
+        const totalItem = cart.reduce((sum, item) => sum + item.qty, 0);
+        document.querySelector(".cart-count").textContent = totalItem;
+      }
+
+      function renderCart() {
+        const cartList = document.getElementById("cart-items");
+        cartList.innerHTML = "";
+
+        if (cart.length === 0) {
+          cartList.innerHTML = "<p>Keranjang masih kosong</p>";
+          document.getElementById("cart-total").textContent = "0";
+          return;
+        }
+
+        let total = 0;
+
+        cart.forEach(function (item, index) {
+          total += item.harga * item.qty;
+
+          const div = document.createElement("div");
+          div.classList.add("cart-item");
+          div.innerHTML = `
+            <div class="cart-item-info">
+                <p>${item.nama}</p>
+                <p>Rp ${item.harga.toLocaleString("id-ID")}</p>
+            </div>
+            <div class="cart-item-qty">
+                <button onclick="changeQty(${index}, -1)">-</button>
+                <span>${item.qty}</span>
+                <button onclick="changeQty(${index}, 1)">+</button>
+            </div>
+        `;
+          cartList.appendChild(div);
+        });
+
+        document.getElementById("cart-total").textContent =
+          total.toLocaleString("id-ID");
+      }
+
+      function changeQty(index, amount) {
+        cart[index].qty += amount;
+
+        if (cart[index].qty <= 0) {
+          cart.splice(index, 1);
+        }
+
+        updateCartCount();
+        renderCart();
+      }
+
+      function openCart() {
+        renderCart();
+        document.getElementById("cart-drawer").classList.add("active");
+        document.getElementById("cart-overlay").style.display = "block";
+      }
+
+      function closeCart() {
+        document.getElementById("cart-drawer").classList.remove("active");
+        document.getElementById("cart-overlay").style.display = "none";
+      }
+
+    </script>
+  </body>
+</html>

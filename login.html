@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="dashboard-admin.css">
+	<title>Login Dashboard</title>
+</head>
+<body>
+
+	<div class="login-page">
+
+	  <div class="login-left">
+			<h1>New Balance Store</h1>
+			<p>Selamat datang di Dashboard Admin</p>
+	  </div>
+	
+	  <div class="login-right">
+      <form action="login-dashboard-admin.php" method="post">
+		<div class="form-container">
+
+           <h2>Login Dashboard Admin</h2>
+
+		    <div class="email-form">
+                <label for="email">Alamat Email</label>
+		        <input type="email" id="email" name="email"
+		         placeholder="Masukkan alamat email" required>
+		    </div>
+
+		    <div class="password-form">
+			    <label for="password" >Password</label>
+			    <input type="password" id="password" name="password"
+			     placeholder="masukkan password" required>
+		    </div>
+
+		    <div class="nomor-form">
+                <label for="nomor_telepon">Nomor WhatsApp</label>
+			    <input type="tel" id="nomor_telepon" name="nomor_telepon"
+			    placeholder="08xxxxxxxxxx" required>
+		    </div>
+
+			<button type="submit">Login Ke Dashboard</button>
+			<label class="remember-label">
+				<input type="checkbox" checked="checked" name="remember">
+				Remember Me
+			</label>
+		</div>
+
+		<div class="button-container">
+        <button type="button" class="cancelbtn">Cancel</button>
+		<span class="psw">Lupa Sandi?<a href="#">Hubungi Admin</a></span>
+		</div>
+	  </form>
+	  
+	  </div>
+	</div>
+	
+</body>
+</html>
